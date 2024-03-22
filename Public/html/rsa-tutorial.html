@@ -10,8 +10,72 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/security.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+		<style>
+	
+	.left-side, .right-side{
+		border: 1px solid lightgrey; padding: 10px;
+	}
+
+	
+		/* Custom CSS */
+			.custom-input {
+				width: 20em; /* Adjust the width as needed */
+			}
+			.custom-input-2{
+				width: 25em;
+				margin-left: -5em;
+			}
+
+			.custom-input-3{
+				width: 25em;
+				margin-left: -12em;
+			}
+			.custom-input-4{
+				width: 15em;
+				margin-left: -2em;
+			}
+
+					@media (min-width: 990px) and (max-width: 1200px) {
+			/* Medium screens (992px) and below */
+			.custom-input {
+				width: 15em; /* Adjust the width for medium screens */
+			}
+
+			.custom-input-2{
+				width: 20em;
+			}
+
+			.custom-input-3{
+				width: 10em;
+			}
+
+		}
+			@media (min-width: 769px) and (max-width: 989px) {
+			/* Medium screens (992px) and below */
+			.custom-input {
+				width: 12em; /* Adjust the width for medium screens */
+			}
+
+			.custom-input-2{
+				width: 15em;
+				margin-left: -1px;
+			}
+
+			.custom-input-3{
+				width: 15em;
+				margin-left: -10em;
+			}
+		}
+
+
+		
+			
+		</style>
+
+		
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -22,7 +86,7 @@
 
 						<!-- Logo -->
 							<h1 id="logo"><a href="/">RSA Algorithm</a></h1>
-							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+							<p>Unlocking Security with RSA: Where Encryption Meets Impeccable Protection!</p>
 
 						<!-- Nav Bar-->
 						<nav id="nav">
@@ -39,184 +103,353 @@
 					</div>
 				</section>
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
+<!-- This is the main way that we change the page for loading different steps -->
+				  <div id="component-container">
+					<!-- Content of Page 1 && Step 1 -->
+					<div id="page1">
+						<div class="container mt-2">
+							<div class="row">
+								<!-- Left side: Input -->
+								<div class="col-md-6">
+									<div class="custom-center">
+										<h2 class="text-center">Step 1</h2> <!-- Removed unnecessary styles -->
+									</div>
+							
+									<div class="container mt-3 main-column-1 left-side">
+										<div class="row mb-3">
+											<div class="col-sm-4"> <!-- Adjusted column size to fit the label properly -->
+												<label for="textbox1" class="col-form-label">1st prime p:</label>
+											</div>
+											<div class="col-sm-8"> <!-- Adjusted column size to fit the input field properly -->
+												<input type="text" id="textbox1" class="form-control custom-input">
+											</div>
+										</div>
+							
+										
+										<div class="row mb-3">
+											<div class="col-sm-4"> <!-- Adjusted column size to fit the label properly -->
+												<label for="textbox2" class="col-form-label">2nd prime q:</label>
+											</div>
+											<div class="col-sm-8"> <!-- Adjusted column size to fit the input field properly -->
+												<input type="text" id="textbox2" class="form-control custom-input">
+											</div>
+										</div>
+
+										<div style="text-align: center;">
+											<button type="button" class="main-button-color" style="margin-top: 5em; margin-bottom: 5em;">Calculate</button>
+										</div>
+										
+									</div>
+								</div>
+
+							  <!-- Right side: Explaining the Steps  -->
+							  <div class="col-md-6">
+								<article class="box post">
+								  <h2 class="primes"><strong>Primes</strong></h2>
+								  <p>In RSA encryption, we use a special number 'n' made by multiplying two big secret numbers, 'p' and 'q'. Now, if I give you 'n', it's like giving you a locked box without the key. Here's the cool part: figuring out 'p' and 'q' from 'n' is like cracking the toughest code ever. This is why RSA encryption is super secure. So, to get started with RSA, just pick your two secret numbers and let the encryption magic begin!</p>
+
+								  <p>Security: The security of RSA encryption relies on the difficulty of factoring the modulus n into its prime factors p and q. The larger the modulus 
+									n (and hence the prime factors p and q), the more computationally difficult it becomes to factorize it, making the encryption more secure.</p>
+								</article>
+							  </div>
+
+							</div>
+						  </div>
+						  <div class="text-center"> <!-- Center the button -->
+
+							<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+					
+						</div>
+						</div>
+					<!-- Content of Step 2 -->
+					<div id="page2" style="display: none;">
+
+
+					  <div class="container mt-3">
 						<div class="row">
 
-							<!-- Sidebar -->
-								<div id="sidebar" class="col-4 col-12-medium">
+					
+						  <!-- Left side: Input -->
+						  <div class="col-md-6">
 
-									<!-- Excerpts -->
-										<section>
-											<ul class="divided">
-												<li>
+							<div class="custom-center">
+							<h2 class="text-align: center">Step 2</h2>
+						</div>
 
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<span class="date">July 30</span>
-																<h3><a href="#">Just another post</a></h3>
-															</header>
-															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-															suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-														</article>
-
-												</li>
-												<li>
-
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<span class="date">July 28</span>
-																<h3><a href="#">And another post</a></h3>
-															</header>
-															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-															suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-														</article>
-
-												</li>
-												<li>
-
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<span class="date">July 24</span>
-																<h3><a href="#">One more post</a></h3>
-															</header>
-															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-															suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-														</article>
-
-												</li>
-											</ul>
-										</section>
-
-									<!-- Highlights -->
-										<section>
-											<ul class="divided">
-												<li>
-
-													<!-- Highlight -->
-														<article class="box highlight">
-															<header>
-																<h3><a href="#">Something of note</a></h3>
-															</header>
-															<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-															<p>Phasellus sed laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam
-															viverra sit amet mollis tortor congue magna lorem ipsum dolor et quisque ut odio facilisis
-															convallis. Etiam non nunc vel est suscipit convallis non id orci. Ut interdum tempus
-															facilisis convallis. Etiam non nunc vel est suscipit convallis non id orci.</p>
-															<ul class="actions">
-																<li><a href="#" class="button icon solid fa-file">Learn More</a></li>
-															</ul>
-														</article>
-
-												</li>
-												<li>
-
-													<!-- Highlight -->
-														<article class="box highlight">
-															<header>
-																<h3><a href="#">Something of less note</a></h3>
-															</header>
-															<a href="#" class="image left"><img src="images/pic07.jpg" alt="" /></a>
-															<p>Phasellus sed laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam
-															viverra sit amet mollis tortor congue magna lorem ipsum dolor et quisque ut odio facilisis
-															convallis. Etiam non nunc vel est suscipit convallis non id orci. Ut interdum tempus
-															facilisis convallis. Etiam non nunc vel est suscipit convallis non id orci.</p>
-															<ul class="actions">
-																<li><a href="#" class="button icon solid fa-file">Learn More</a></li>
-															</ul>
-														</article>
-
-												</li>
-											</ul>
-										</section>
-
+							<div class="container mt-2 ">
+								<div class="row mb-3">
+									<div class="col-sm-3">
+										<label for="textbox1" class="col-form-label">e =</label>
+									</div>
+									<div class="col-sm-4">
+										<input type="text" id="textbox1" class="form-control custom-input-2" >
+									</div>
 								</div>
 
-							<!-- Content -->
-								<div id="content" class="col-8 col-12-medium imp-medium">
+								<p><em>This e may even be pre-selected and the same for all participants.</em></p>
+							</div>
 
-									<!-- Post -->
-										<article class="box post">
-											<header>
-												<h2>Behold! This is the <strong>left sidebar</strong> layout<br />
-												with a sidebar on the left!</h2>
-											</header>
-											<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>
-											<h3>Left is the opposite of right</h3>
-											<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-											Curabitur leo nibh, rutrum eu malesuada in tristique</p>
-											<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat
-											Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula
-											vel quam viverra sit amet mollis tortor congue. Sed quis mauris sit amet
-											magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada in,
-											tristique at erat. Curabitur leo nibh, rutrum eu malesuada in, tristique
-											at erat lorem ipsum dolor sit amet lorem ipsum sed consequat magna
-											tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros consequat
-											magna tempus</p>
-											<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-											Curabitur leo nibh, rutrum eu malesuada in tristique</p>
-											<h3>Accumsan lorem ipsum veroeros</h3>
-											<p>Consequat Phasellus laoreet massa id in, tristique at erat lorem
-											ipsum dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna.</p>
-											<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-											Curabitur leo nibh, rutrum eu malesuada in tristique</p>
-											<h3>Ligula suspcipit fusce veroeros</h3>
-											<p>Nullam dolore etiam sed massa id in, tristique at erat lorem
-											ipsum dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna.</p>
-											<p>Sed massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan.</p>
-										</article>
+							<div style="text-align: center;">
+								<img src="../images/cyberpic.jpeg" alt="" width="250" height="200" style="margin-top: 2em; box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+							</div>
+							
+							
+						  </div>
 
+						  <!-- Right side: Explaining the Steps  -->
+						  <div class="col-md-6">
+							<article class="box post">
+							  <h2 class="primes"><strong>Public key</strong></h2>
+							  
+							  <div class="right-side" style="padding-bottom: 5em;">
+								<p> The RSA method utilizes a modulus n, also known as the product 
+								</p>
+								<p>n = p × q = 143 (8 bit) </p>
+  
+								<p>
+								  However, for secure communication, much larger primes yielding n values with several thousand binary digits are employed. The public key in RSA comprises the modulus n and an exponent e.
+								</p>
+  
+								<p>
+								  The public key is primarily used for encrypting messages, ensuring that only the intended recipient, who possesses the corresponding private key, can decrypt and read the message. This provides confidentiality for the transmitted data, even if it's intercepted by unauthorized parties.
+
+
+
+								  
+								</p>
+							  </div>
+							</article>
+						  </div>
+
+						</div>
+
+						<div class="text-center"> <!-- Center the button -->
+
+							<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+					
+						</div>
+					  </div>
+					</div>
+					<!-- Content of Page 3 -->
+					<div id="page3" style="display: none;">
+					  
+
+						<div class="container mt-3">
+							<div class="row">
+	
+						
+							  <!-- Left side: Input -->
+							  <div class="col-md-6">
+	
+								<div class="custom-center">
+								<h2 class="text-align: center">Step 3</h2>
+							</div>
+	
+								<div class="container mt-2">
+									<div class="row mb-3">
+										<div class="col-sm-3">
+											<label for="textbox1" class="col-form-label">d =</label>
+										</div>
+										<div class="col-sm-4">
+											<input type="text" id="textbox1" class="form-control custom-input-2" >
+										</div>
+									</div>
+	
+									<p><em>For the chosen values of p, q, and e.</em></p>
 								</div>
+
+								<div style="text-align: center;">
+									<img src="../images/cyber2.jpeg" alt="" width="250" height="200" style="margin-top: 3em; box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+								</div>
+							  </div>
+		
+	
+							  <!-- Right side: Explaining the Steps  -->
+							  <div class="col-md-6">
+								<article class="box post">
+								  <h2 class="primes"><strong>Private Key</strong></h2>
+								  
+									<p class="right-side" style="padding-bottom: 5em;">
+										RSA encryption relies on the Euler φ function of n, denoted as φ(n), calculated as (p − 1) × (q − 1), where p and q are distinct prime factors of n. This function ensures security by generating a secret key. For security, φ(n) and the encryption exponent e must be coprime, meaning their gcd is 1. <br> <br> This ensures no common factors, enhancing encryption security.The secret key d is derived such that e × d ≡ 1 (mod φ(n)), ensuring efficient decryption. d can be efficiently determined, given p, q, and e, typically through algorithms like the extended Euclidean algorithm. <br> <br>In summary, RSA encryption relies on φ(n) for secure key generation, ensuring mathematical relationships between encryption and decryption keys. The determination of d involves satisfying the mathematical relationship with e and φ(n), achieved using algorithms like the extended Euclidean algorithm.
+									</p>
+
+
+								</article>
+							  </div>
+	
+							</div>
+	
+							<div class="text-center"> <!-- Center the button -->
+	
+								<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+						
+							</div>
+						</div>
+					</div>
+					<!-- Content of Page 4 -->
+					<div id="page4" style="display: none;">
+					 
+					<div class="container mt-5">
+						<div class="row">
+
+
+						<!-- Left side: Input -->
+						<div class="col-md-6">
+
+							<div class="custom-center">
+							<h2 class="text-align: center">Step 4</h2>
+						</div>
+
+							<div class="container left-side">
+								<div class="row mb-3">
+									<div class="col-sm-3">
+										<label for="textbox1" class="col-form-label">Plain Text: </label>
+									</div>
+									<div class="col-sm-4">
+										<input type="text" id="textbox1" class="form-control custom-input">
+									</div>
+								</div>
+
+						
+								<div class="row mb-3 ">
+									<div class="col-sm-3">
+										<label for="textbox1" class="col-form-label">Cipher Text: </label>
+									</div>
+									<div class="col-sm-4">
+										<input type="text" id="textbox1" class="form-control custom-input">
+									</div>
+								</div>
+
+								<div style="text-align: center;">
+									<button type="button" class="main-button-color" style="margin-top: 2em; margin-bottom: 2em; display: inline-block;">Calculate</button>
+								</div>
+								
+
+							</div>
+						</div>
+
+						<!-- Right side: Explaining the Steps  -->
+						<div class="col-md-6">
+							<article class="box post">
+							<h2 class="primes "><strong>Encryption</strong></h2>
+							<p>
+								In the RSA encryption process, which operates solely on numerical values within the range of 0 to n - 1, a message m (a number) is encrypted using the public key(n, e) as follows:
+								<br><br>
+								The encrypted message m'is computed as the result of raising m to the power of e modulo n , expressed as:
+								<br><br>
+								m' = m^e (mod n)
+							</p>
+
+							<p>
+								Before encryption, the message m may undergo padding to ensure it meets certain requirements, such as being of the appropriate length or providing additional security.
+							</p>
+							</article>
+						</div>
 
 						</div>
 					</div>
-				</section>
+					<div class="text-center"> <!-- Center the button -->
 
-			 <!-- Footer -->
+						<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+
+					</div>
+					</div>
+
+
+						
+					</div>
+					<!-- Content of Page 5 -->
+					<div id="page5" style="display: none;">
+
+						<div class="container mt-5">
+							<div class="row custom-center">
+	
+	
+							<!-- Left side: Input -->
+							<div class="col-md-6 text-center">
+								<div class="custom-center">
+									<h2>Step 5</h2>
+								</div>
+							
+									<div class="row ">
+										<div class="col-sm-3">
+											<label for="textbox1" class="col-form-label">Cipher Text: </label>
+										</div>
+										<div class="col-sm-4">
+											<input type="text" id="textbox1" class="form-control custom-input" >
+										</div>
+								
+	
+							
+									<div class="row mb-3"  style="margin-bottom: -1em;">
+										<div class="col-sm-3" >
+											<label for="textbox1" class="col-form-label">Plain Text: </label>
+										</div>
+										<div class="col-sm-4">
+											<input type="text" id="textbox1" class="form-control custom-input">
+										</div>
+									</div>
+								</div>
+
+								<div style="text-align: center;">
+									<img src="../images/cyber3.jpeg" alt="" width="250" height="200" style="margin-top: 3em; box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+								</div>
+
+							</div>
+							
+							<!-- Right side: Explaining the Steps  -->
+							<div class="col-md-6">
+								<article class="box post">
+								<h2 class="primes"><strong>Decryption</strong></h2>
+								<div class="right-side" style="padding-bottom: 5em;">
+									<p>
+										Decrypting with the private key (n, d) is done analogously with m'' = (m')^d (mod n). 
+										<br><br>
+										This is m'' = m^(e × d) (mod n).
+									</p>
+									<p>
+										The decryption process utilizes the private key (n,d), which should be kept confidential and known only to the intended recipient. The private exponent d is derived from e through modular arithmetic and is used exclusively for decrypting messages encrypted with the corresponding public key.
+									</p>
+									<p>Similar to encryption, the decryption process may involve padding schemes to ensure compatibility and security. Padding is applied to the decrypted message to recover the original message structure and ensure proper decryption</p>
+								</div>
+								</article>
+							</div>
+	
+							</div>
+						</div>
+						<div class="text-center"> <!-- Center the button -->
+
+							<a href="/">
+								<button type="button" class="main-button-color" style="margin-top: 5em; margin-bottom: 5em;">Main Menu</button>
+							</a>
+	
+						</div>
+						</div>
+
+					</div>
+				  </div>
+				</div>
+									
+								
+			<!-- Content -->
+			<div id="content" class="col-8 col-12-medium imp-medium">
+		
+					<div class="container mt-5">
+
+					</div>
+			  </div>
+			
+			</div>
+
+
+
+
+
+					
+					</div>
+
+
+					<!-- Footer -->
 <section id="footer" class="d-flex justify-content-center">
     <div class="container">
         <header>
@@ -254,6 +487,11 @@
     </div>
 </section>
 
+				</section>
+
+		
+
+
 
 		</div>
 
@@ -264,6 +502,53 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+			
+			<script>
+
+
+				
+		</script>
+
+
+<script>
+    // JavaScript to handle navigation between component pages
+    var currentPageIndex = 1;
+    var totalPages = 5; // Update this with the total number of pages
+
+    document.querySelectorAll('.next-page').forEach(function(button) {
+      button.addEventListener('click', function() {
+        currentPageIndex++;
+        if (currentPageIndex <= totalPages) {
+          loadPage(currentPageIndex);
+        } else {
+          // Handle when reached the last page
+          alert('This is the last page.');
+          currentPageIndex = totalPages; // Prevent going beyond the last page
+        }
+      });
+    });
+
+    function loadPage(pageIndex) {
+      // Hide all pages
+      document.querySelectorAll('#component-container > div').forEach(function(page) {
+        page.style.display = 'none';
+      });
+
+      // Show the current page
+      document.querySelector('#page' + pageIndex).style.display = 'block';
+    }
+
+    // Load the first page initially
+    loadPage(currentPageIndex);
+  </script>
 
 	</body>
 </html>
