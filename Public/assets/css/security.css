@@ -11,3 +11,8 @@
     text-align: center;
 
 }
+
+.image.featured img {
+    width: 300px; /* Adjust according to your design */
+    height: auto; /* Maintain aspect ratio */
+}

@@ -1491,6 +1491,9 @@ input, select, textarea {
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
 		border: solid 6px #ebebeb !important;
+
+		vertical-align: middle; /* Add this line to ensure proper alignment */
+
 	}
 
 		.image:hover {
