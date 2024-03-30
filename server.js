@@ -4,7 +4,7 @@ const { modInv } = require('bigint-crypto-utils');
 
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 // Allows us to serve up static files
 app.use(express.static(path.join(__dirname, 'Public')));
