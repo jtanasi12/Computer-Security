@@ -10,10 +10,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/security2.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -21,107 +22,380 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 style="margin-top: -50px;"id="logo"><a href="/">Double </a></h1>
-							<h1 class="mt-3"id="logo"><a href="/">Transposition</a></h1>
-
-							<p>Double Transposition: Rearranging the Rules, Securing Communication!"</p>
+							<h1 id="logo"><a href="/">Double Transposition</a></h1>
+							<p>Unlocking Security with RSA: Where Encryption Meets Impeccable Protection!</p>
 
 						<!-- Nav Bar-->
 						<nav id="nav">
 							<ul>
 								<li><a class="icon solid fa-home" href="/"><span>Introduction</span></a></li>
 								<li><a class="icon solid fa-cog" href="rsa"><span>RSA Algorithm</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="doubletransposition"><span>Double Transpositionr</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="doubletransposition"><span>Double Transposition</span></a></li>
 
 								<li><a class="icon solid fa-sitemap" href="team-members"><span>Team Members</span></a></li>
 
 							</ul>
 						</nav>
+
 					</div>
 				</section>
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div id="content">
+<!-- This is the main way that we change the page for loading different steps -->
+				  <div id="component-container">
+					<!-- Content of Page 1 && Step 1 -->
+					<div id="page1">
+						<div class="container mt-2">
+							<div class="row">
+								<!-- Left side: Input -->
+								<div class="col-md-6">
+									<div class="custom-center">
+										<h2 class="text-center">Step 1</h2> 
+									</div>
+							
+									<div class="container mt-3 main-column-1 left-side">
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<label for="textbox1" class="col-form-label">Message:</label>
+											</div>
+											<div class="col-sm-8"> 
+												<input type="text" id="messageTextBox1" class="form-control custom-input">
+											</div>
+										</div>
 
-							<!-- Post -->
+										<p><em>*You have to input 12 characters only; no more and no less!</em></p>
+
+										<div style="text-align: center;">
+											<button id="calclulateMessageButton" onclick="" type="button" class="main-button-color" style="margin-top: 5em; margin-bottom: 5em;">Calculate</button>
+										</div>
+
+										
+									</div>
+								</div>
+
+							  <!-- Right side: Explaining the Steps  -->
+							  <div class="col-md-6">
 								<article class="box post">
-									<header>
-										<h2>Behold! This is the <strong>no sidebar</strong> layout<br />
-										with no sidebar at all!</h2>
-									</header>
-									<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>
-									<h3>And yeah, that's basically it</h3>
-									<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-									ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-									sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-									Curabitur leo nibh, rutrum eu malesuada in tristique</p>
-									<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat
-									Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula
-									vel quam viverra sit amet mollis tortor congue. Sed quis mauris sit amet
-									magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada in,
-									tristique Curabitur leo nibh, rutrum eu malesuada in, tristique
-									at erat lorem ipsum dolor sit amet lorem ipsum sed consequat magna
-									tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros consequat
-									magna tempus</p>
-									<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-									ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-									sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-									Curabitur leo nibh, rutrum eu malesuada in tristique</p>
-									<h3>Accumsan lorem ipsum veroeros</h3>
-									<p>Consequat Phasellus laoreet massa id in, tristique at erat lorem
-									ipsum dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna.</p>
-									<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-									ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-									sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-									Curabitur leo nibh, rutrum eu malesuada in tristique</p>
-									<h3>Ligula suspcipit fusce veroeros</h3>
-									<p>Nullam dolore etiam sed massa id in, tristique at erat lorem
-									ipsum dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna.</p>
-									<p>Sed massa id justo mattis pharetra. Fusce suscipit
-									ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-									sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan.</p>
+								  <h2 class="transposition"><strong>Transposition</strong></h2>
+								  <p>
+									The double transposition cipher is a manual encryption technique that involves rearranging the characters of a message twice using two separate keys, first by transposing the rows and then the columns of a grid representation of the message. In encryption, the message is written out in a grid format, and the rows are rearranged based on one key, followed by the columns being rearranged based on another key. </p>
+
+									<h2 class="transposition"><strong>Message</strong></h2>
+
+									<p>
+										The message to be encrypted is written out in a grid format, typically horizontally, with a fixed number of columns determined by the length of a chosen key.
+									</p>
 								</article>
+							  </div>
+
+							</div>
+						  </div>
+						  <div class="text-center"> <!-- Center the button -->
+
+							<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+					
+						</div>
+						</div>
+					<!-- Content of Step 2 -->
+					<div id="page2" style="display: none;">
+
+
+					  <div class="container mt-3">
+						<div class="row">
+
+					
+						  <!-- Left side: Input -->
+						  <div class="col-md-6">
+
+							<div class="custom-center">
+							<h2 class="text-align: center">Step 2</h2>
+						</div>
+
+							<div class="container mt-2 ">
+								<div class="row mb-3">
+								
+
+							<div class="row mb-3">
+								<div class="col-sm-3">
+									<label for="rowInput" class="col-form-label">Row Key:</label>
+								</div>
+								<div class="col-sm-4">
+									<input type="text" id="rowInput" class="form-control custom-input-2" pattern="[1-3]{3}" title="Please enter any combination of 1, 2, 3 without repetition." placeholder="Enter row (1-3)">
+								</div>
+							</div>
+
+
+									<div class="col-sm-3">
+										<label for="columnInput" style="margin-right: 4em;"  class="col-form-label">Column Key:</label>
+									</div>
+									<div class="col-sm-4">
+										<input type="text" id="columnInput" class="form-control custom-input-2" pattern="[1234]{4}" title="Please enter any combination of 1, 2, 3, 4 without repetition." placeholder="Enter columns (1-4)">
+									</div>
+								</div>
+
+
+							</div>
+
+								
+							<!-- Calculate 'keys' Button ' -->
+							<div style="text-align: center;">
+								<button id="calclulatePrimesButton" onclick="HandleMessage()" type="button" class="main-button-color" style="margin-top: 5em; margin-bottom: 5em;">Calculate</button>
+							</div>
+							
+							<div style="text-align: center;">
+								<img src="../images/cyberpic.jpeg" alt="" width="250" height="200" style="box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease;">
+							</div>
+						
+							
+						  </div>
+
+						  <!-- Right side: Explaining the Steps  -->
+						  <div class="col-md-6">
+							<article class="box post">
+							  <h2 class="transposition"><strong>Keys</strong></h2>
+							  
+							  <div class="right-side" style="padding-bottom: 5em;">
+		
+								<p>
+									<strong>Row Perumutation: [1,2,3]</strong>
+								</p>
+								<p>
+									<strong>Column Perumutation: [1,2,3, 4]</strong>
+								</p>
+								<p>
+									In a double transposition cipher, there are two keys: one for row transposition and one for column transposition. These keys determine the order of rearranging rows and columns in the encryption and decryption processes. Keeping these keys secret is crucial for security, as they are required to decrypt the message. Strong and unpredictable keys are essential to enhance the security of the cipher.
+								</p>
+  
+							
+							  </div>
+							</article>
+						  </div>
+
+						</div>
+
+						<div class="text-center"> <!-- Center the button -->
+
+							<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+					
+						</div>
+					  </div>
+					</div>
+					<!-- Content of Page 3 -->
+					<div id="page3" style="display: none;">
+					  
+
+						<div class="container mt-3">
+							<div class="row">
+	
+						
+							  <!-- Left side: Input -->
+							  <div class="col-md-6">
+	
+								<div class="custom-center">
+								<h2 class="text-align: center">Step 3</h2>
+							</div>
+	
+								<div class="container mt-2">
+									<div class="row mb-3">
+										
+									</div>
+	
+								</div>
+
+							  </div>
+		
+	
+							  <!-- Right side: Explaining the Steps  -->
+							  <div class="col-md-6">
+								<article class="box post">
+								  <h2 class="transposition"><strong>Encryption: Rows</strong></h2>
+								  
+									<p class="right-side" style="padding-bottom: 5em;">
+										The encryption process in the double transposition cipher involves first arranging the message in a grid format based on a chosen key, with the number of columns determined by the length of the key. Then, the rows of the grid are rearranged according to a row transposition key, altering their order. Subsequently, the columns are rearranged based on a column transposition key, further scrambling the message. 
+									</p>
+
+
+								</article>
+							  </div>
+	
+							</div>
+	
+							<div class="text-center"> <!-- Center the button -->
+	
+								<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+						
+							</div>
+						</div>
+					</div>
+					<!-- Content of Page 4 -->
+					<div id="page4" style="display: none;">
+					 
+					<div class="container mt-5">
+						<div class="row">
+
+
+						<!-- Left side: Input -->
+						<div class="col-md-6">
+
+							<div class="custom-center">
+							<h2 class="text-align: center">Step 4</h2>
+						</div>
+
+							<div class="container left-side">
+								<div class="row mb-3">
+								
+								</div>
+
+								<div class="row mb-3 ">
+						
+								</div>
+
+			
+
+							</div>
+						</div>
+
+						<!-- Right side: Explaining the Steps  -->
+						<div class="col-md-6">
+							<article class="box post">
+							<h2 class="transposition "><strong>Encryption: Columns</strong></h2>
+							<p>
+								The columns are rearranged based on a column transposition key, further obfuscating the message. The resulting encrypted text is derived by reading the grid row by row. Decryption involves reversing these transpositions using the corresponding keys, restoring the original message. Despite its simplicity, the double transposition cipher relies on keeping the keys confidential for security.
+							</p>
+
+							</article>
+						</div>
 
 						</div>
 					</div>
-				</section>
+					<div class="text-center"> <!-- Center the button -->
 
- <!-- Footer -->
- <section id="footer" class="d-flex justify-content-center">
+						<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+
+					</div>
+					</div>
+
+					<!-- Content of Page 5 -->
+					<div id="page5" style="display: none;">
+
+						<div class="container mt-5">
+							<div class="row custom-center">
+	
+	
+							<!-- Left side: Input -->
+							<div class="col-md-6 text-center">
+								<div class="custom-center">
+									<h2>Step 5</h2>
+								</div>
+							
+									<div class="row ">
+									
+									<div class="row mb-3"  style="margin-bottom: -1em;">
+										
+									</div>
+								</div>
+
+
+							</div>
+							
+							<!-- Right side: Explaining the Steps  -->
+							<div class="col-md-6">
+								<article class="box post">
+								<h2 class="transposition"><strong>Decryption: Columns</strong></h2>
+								<div class="right-side" style="padding-bottom: 5em;">
+								
+									<p>
+										During decryption, the encrypted message undergoes a reversal of the column transposition applied during encryption. This involves rearranging the columns of the grid back to their original order based on the reverse of the column permutation key used in encryption. Each column is moved to its correct position, aligning with the original sequence before encryption. 
+
+									</p>
+
+								</div>
+								</article>
+							</div>
+	
+							</div>
+						</div>
+						<div class="text-center"> <!-- Center the button -->
+
+							<button type="button" class=" main-button-color next-page" style="margin-top: 5em; margin-bottom: 5em;">Next</button>
+	
+						</div>
+					</div>
+
+					<!-- Content of Page 5 -->
+					<div id="page6" style="display: none;">
+
+						<div class="container mt-5">
+							<div class="row custom-center">
+	
+	
+							<!-- Left side: Input -->
+							<div class="col-md-6 text-center">
+								<div class="custom-center">
+									<h2>Step 6</h2>
+								</div>
+							
+									<div class="row ">
+									
+									<div class="row mb-3"  style="margin-bottom: -1em;">
+										
+									</div>
+								</div>
+
+
+							</div>
+							
+							<!-- Right side: Explaining the Steps  -->
+							<div class="col-md-6">
+								<article class="box post">
+								<h2 class="transposition"><strong>Decryption: Rows</strong></h2>
+								<div class="right-side" style="padding-bottom: 5em;">
+								
+									<p>
+										In the decryption process, the rows are reversed after columns. This entails rearranging the rows of the grid back to their original order based on the reverse of the row permutation key used in encryption. Each row is moved to its correct position, aligning with the original sequence before encryption. After decryption the cipher text is converted back into its original plain text format.
+									</p>
+									
+								
+								</div>
+								</article>
+							</div>
+	
+							</div>
+						</div>
+						<div class="text-center"> <!-- Center the button -->
+
+							<a href="/">
+								<button type="button" class="main-button-color" style="margin-top: 5em; margin-bottom: 5em;">Main Menu</button>
+							</a>
+						</div>
+					</div>
+
+					</div>
+					
+				  </div>
+
+				</div>
+			
+								
+			<!-- Content -->
+			<div id="content" class="col-8 col-12-medium imp-medium">
+		
+					<div class="container mt-5">
+
+					</div>
+			  </div>
+			
+			</div>
+
+
+
+
+
+					
+					</div>
+
+
+					<!-- Footer -->
+<section id="footer" class="d-flex justify-content-center">
     <div class="container">
         <header>
             <h2>Questions or comments? <strong>Get in touch:</strong></h2>
@@ -158,6 +432,12 @@
     </div>
 </section>
 
+				</section>
+
+		
+
+
+
 		</div>
 
 		<!-- Scripts -->
@@ -167,6 +447,55 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/RSA/rsa.js"></script>
+			<script src="assets/js/TRANSPO/transposition.js"></script>
+			
+
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<script>
+    // JavaScript to handle navigation between component pages
+    var currentPageIndex = 1;
+    var totalPages = 6; // Update this with the total number of pages
+
+    document.querySelectorAll('.next-page').forEach(function(button) {
+      button.addEventListener('click', function() {
+        currentPageIndex++;
+        if (currentPageIndex <= totalPages) {
+          loadPage(currentPageIndex);
+        } else {
+          // Handle when reached the last page
+          alert('This is the last page.');
+          currentPageIndex = totalPages; // Prevent going beyond the last page
+        }
+      });
+    });
+
+    function loadPage(pageIndex) {
+      // Hide all pages
+      document.querySelectorAll('#component-container > div').forEach(function(page) {
+        page.style.display = 'none';
+      });
+
+      // Show the current page
+      document.querySelector('#page' + pageIndex).style.display = 'block';
+    }
+
+    // Load the first page initially
+    loadPage(currentPageIndex);
+   </script>
+
+
+
+
 
 	</body>
 </html>
+
+
+
