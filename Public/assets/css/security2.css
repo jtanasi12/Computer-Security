@@ -1,0 +1,70 @@
+
+.transposition, .step-1{
+    text-align: center;
+}
+
+.main-button-color{
+	color: #ed786a
+}
+
+.custom-center{
+    text-align: center;
+
+}
+
+
+.left-side, .right-side{
+    border: 1px solid lightgrey; padding: 10px;
+}
+
+
+    /* Custom CSS */
+        .custom-input {
+            width: 20em; /* Adjust the width as needed */
+        }
+        .custom-input-2{
+            width: 25em;
+            margin-left: -5em;
+        }
+
+        .custom-input-3{
+            width: 25em;
+            margin-left: -12em;
+        }
+        .custom-input-4{
+            width: 15em;
+            margin-left: -2em;
+        }
+
+                @media (min-width: 990px) and (max-width: 1200px) {
+        /* Medium screens (992px) and below */
+        .custom-input {
+            width: 15em; /* Adjust the width for medium screens */
+        }
+
+        .custom-input-2{
+            width: 20em;
+        }
+
+        .custom-input-3{
+            width: 10em;
+        }
+
+    }
+        @media (min-width: 769px) and (max-width: 989px) {
+        /* Medium screens (992px) and below */
+        .custom-input {
+            width: 12em; /* Adjust the width for medium screens */
+        }
+
+        .custom-input-2{
+            width: 15em;
+            margin-left: -1px;
+        }
+
+        .custom-input-3{
+            width: 15em;
+            margin-left: -10em;
+        }
+    }
+

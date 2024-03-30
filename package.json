@@ -5,13 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "Joseph Tanasi",
   "license": "ISC",
   "dependencies": {
     "bigint-crypto-utils": "^3.3.0",
-    "express": "^4.18.3",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.0"
   }
 }
