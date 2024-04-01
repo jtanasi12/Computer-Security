@@ -1,0 +1,65 @@
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        table {
+            margin-bottom: 20px;
+        }
+
+        #matrix-container{
+            margin-top: 5em;
+        }
+
+    
+
+        @media (min-width: 1400px) {
+            #matrix-container{
+                margin-left: 15em;
+            }
+    
+
+        }
+
+
+        @media (max-width: 1399px) and (min-width: 1200px) {
+            #matrix-container{
+                margin-left: 12em;
+            }
+    
+
+        }  
+        
+        @media (max-width: 1199px) and (min-width: 993px) {
+            #matrix-container{
+                margin-left: 9em;
+            }
+    
+
+        }
+
+        @media (max-width: 992px) and (min-width: 770px) {
+            #matrix-container{
+                margin-left: 5em;
+            }
+    
+
+        }
+
+        @media (max-width: 769px) and (min-width: 575px) {
+            #matrix-container{
+                margin-left: 10em;
+            }
+    
+
+        }
+
+        @media (max-width: 574px) and (min-width: 300px) {
+            #matrix-container{
+                      /*  Default of 0em  */
+
+            }
+    
+
+        }
