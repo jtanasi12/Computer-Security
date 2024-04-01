@@ -3,10 +3,58 @@ let characterArray;
 let keys; 
 let encryptedRow; 
 let encryptedColumn; 
+let firstDecryptionStepArray 
+let inverseRowOrder;
+let inverseColumnOrder;
+function Step6(tableName){
+
+    const decryptedArray = ReorderRows(firstDecryptionStepArray, inverseRowOrder);
+    display3x4Matrix(decryptedArray, tableName);
+}
+
+function Step5(tableName){
+     inverseRowOrder = FindInverseOrderUsingPlaceholder(keys.rowKeys);
+
+     inverseColumnOrder = FindInverseOrderUsingPlaceholder(keys.columnKeys);
+
+    console.log("Inverse Row Order:", inverseRowOrder);
+    console.log("Inverse Column Order:", inverseColumnOrder);
+
+    firstDecryptionStepArray = ReorderColumns(encryptedColumn, inverseColumnOrder);
+
+    display3x4Matrix(firstDecryptionStepArray, tableName);
+}
+
+
+//finding the inverse order of an array for decryption
+function FindInverseOrderUsingPlaceholder(encryptionOrder) {
+
+    // Create a placeholder array of the same length as the encryptionOrder, filled with zeros.
+    let inverseOrder = new Array(encryptionOrder.length).fill(0);
+
+    // Iterate over the encryptionOrder array.
+    for (let i = 0; i < encryptionOrder.length; i++) {
+
+        // The current element in encryptionOrder is the new position in the inverse
+        inverseOrder[encryptionOrder[i] - 1] = i + 1;
+    }
+
+    // Return the populated inverseOrder array, which now reflects the original positions.
+    return inverseOrder;
+}
+
+function Step4(tableName){
+    encryptedColumn = ReorderColumns(encryptedRow, keys.columnKeys);
+
+    console.log("After Row Reorder:", encryptedColumn);
+
+    display3x4Matrix(encryptedColumn, tableName);
+
+}
 
 // Encryption 
 function Step3(tableName){
-    encryptedRow = EncrypedtRows(characterArray, keys.rowKeys);
+    encryptedRow = ReorderRows(characterArray, keys.rowKeys);
 
     console.log("After Row Reorder:", encryptedRow);
 
@@ -14,16 +62,8 @@ function Step3(tableName){
     
 }
 
-function Step4(tableName){
-    encryptedColumn = EncryptedColumns(characterArray, keys.columnKeys);
-
-    console.log("After Row Reorder:", encryptedColumn);
-
-    display3x4Matrix(encryptedColumn, tableName);
-
-}
 // Function to reorder a 12-element array based on new row order and return as a single array.
-function EncrypedtRows(dataArray, rowOrder) {
+function ReorderRows(dataArray, rowOrder) {
 
     // Initialize an empty array to hold the matrix (3 rows of 4 elements each).
     let matrix = [];
@@ -47,7 +87,7 @@ function EncrypedtRows(dataArray, rowOrder) {
     return reorderedMatrix.flat();
 }
 
-function EncryptedColumns(dataArray, columnOrder) {
+function ReorderColumns(dataArray, columnOrder) {
     let reorderedArray = [];
 
     // Iterate over each column index specified in columnOrder.

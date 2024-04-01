@@ -1,4 +1,4 @@
-let characterArray; 
+
 
 //takes a users string and validates that it is 12 characters long
 //creates a 12 element array from the string and returns the created array
