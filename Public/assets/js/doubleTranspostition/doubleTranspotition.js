@@ -4,7 +4,6 @@
 //creates a 12 element array from the string and returns the created array
 //will return null if invalid
 function validateAndCreateArray(input) {
-
     //checking string is 12 char long
     if (input.length !== 12) {
 
@@ -14,6 +13,9 @@ function validateAndCreateArray(input) {
 
     // Convert input string into an array of characters
     const charArray = input.split('');
+
+    characterArray = charArray;
+    // Transfer the array we are creating to a global variable
 
     //returning created array
     return charArray;
