@@ -1,11 +1,8 @@
 // Global Variables
-let characterArray;
-let keys; 
-let encryptedRow; 
-let encryptedColumn; 
-let firstDecryptionStepArray 
-let inverseRowOrder;
-let inverseColumnOrder;
+let characterArray, keys, encryptedRow, encryptedColumn,
+firstDecryptionStepArray, inverseRowOrder, inverseColumnOrder,
+tempColumnTable;
+
 function Step6(tableName){
 
     const decryptedArray = ReorderRows(firstDecryptionStepArray, inverseRowOrder);
@@ -48,8 +45,10 @@ function Step4(tableName){
 
     console.log("After Row Reorder:", encryptedColumn);
 
-    display3x4Matrix(encryptedColumn, tableName);
-
+    // This is for displaying the columns permutation
+    tempColumnTable = EncryptColumns(encryptedRow, keys.columnKeys);
+    // Display the permutation for the columns
+    display3x4MatrixCOL(tempColumnTable, tableName);
 }
 
 // Encryption 
@@ -177,7 +176,46 @@ function display3x4Matrix(array, tableName) {
     container.appendChild(table);
 }
 
+function display3x4MatrixCOL(array, tableName) {
 
+    // Get the container element to display the table.
+    const container = document.getElementById(tableName);
+
+    // Create table and tbody elements.
+    let table = document.createElement('table');
+    let tbody = document.createElement('tbody');
+
+    // Loop to create 3 rows (for the 3x4 matrix).
+    for (let i = 0; i < 3; i++) {
+
+        // Create a row.
+        let tr = document.createElement('tr');
+
+        // Loop to add 4 cells in each row.
+        for (let j = 0; j < 4; j++) {
+
+            // Create a cell and set its content from the array.
+            let td = document.createElement('td');
+
+            // Access element from array.
+            td.textContent = array[i + j * 3]; // Access elements row-wise
+
+            // Add border styling to the cell.
+            td.style.border = '1px solid black';
+
+            // Add cell to row.
+            tr.appendChild(td);
+        }
+
+        // Add row to tbody.
+        tbody.appendChild(tr);
+    }
+    // Add tbody to table.
+    table.appendChild(tbody);
+
+    // Display the table in the container.
+    container.appendChild(table);
+}
 
 function HandleKeys() {
 
@@ -193,6 +231,26 @@ function HandleKeys() {
         CreateKeyArrays(rowInput, columnInput);
     }
 }
+
+function EncryptColumns(dataArray, columnOrder) {
+    let reorderedArray = [];
+
+    // Iterate over each column index specified in columnOrder.
+    columnOrder.forEach((order) => {
+        // Calculate the starting index of the current column.
+        let columnStartIndex = (order - 1);
+
+        // Add elements from this column to the reorderedArray.
+        for (let i = 0; i < 3; i++) {
+            let index = i * 4 + columnStartIndex;
+            reorderedArray.push(dataArray[index]);
+        }
+    });
+
+    // Return the newly ordered array.
+    return reorderedArray;
+}
+
 
 // Function that accepts row and column key strings and creates arrays.
 function CreateKeyArrays(rowInput, columnInput) {
